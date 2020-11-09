@@ -1,9 +1,9 @@
-package com.android.cleanMVVM.utils
+package com.android.cleanMVVM.common
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.map
-import com.android.cleanMVVM.utils.State.Status.*
+import com.android.cleanMVVM.common.State.Status.*
 import kotlinx.coroutines.Dispatchers
 
 fun <T, A> performGetCall(databaseQuery: () -> LiveData<T>,
@@ -15,7 +15,7 @@ fun <T, A> performGetCall(databaseQuery: () -> LiveData<T>,
         emitSource(source)
 
         val responseStatus = networkCall.invoke()
-        if (responseStatus.status == SUCCESS) {
+        if (responseStatus.status == SUCCESS){
             saveCallResult(responseStatus.data!!)
 
         } else if (responseStatus.status == ERROR) {

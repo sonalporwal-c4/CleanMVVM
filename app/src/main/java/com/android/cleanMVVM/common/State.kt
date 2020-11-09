@@ -1,4 +1,4 @@
-package com.android.cleanMVVM.utils
+package com.android.cleanMVVM.common
 
 data class State<out T>(val status: Status, val data: T?, val message: String?) {
 

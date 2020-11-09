@@ -2,7 +2,7 @@ package com.android.cleanMVVM.data.repository
 
 import com.android.cleanMVVM.data.local.UserDataDao
 import com.android.cleanMVVM.domain.interactors.RemoteDataSource
-import com.android.cleanMVVM.utils.performGetCall
+import com.android.cleanMVVM.common.performGetCall
 import javax.inject.Inject
 
 class UserDataRepository @Inject constructor(

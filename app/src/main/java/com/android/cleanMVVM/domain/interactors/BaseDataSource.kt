@@ -1,6 +1,6 @@
 package com.android.cleanMVVM.domain.interactors
 
-import com.android.cleanMVVM.utils.State
+import com.android.cleanMVVM.common.State
 import retrofit2.Response
 
 abstract class BaseDataSource {
@@ -19,7 +19,7 @@ abstract class BaseDataSource {
     }
 
     private fun <T> error(message: String): State<T> {
-        return State.error("Network call has failed for a following reason: $message")
+        return State.error("Network call has failed due to this reason: $message")
     }
 
 }

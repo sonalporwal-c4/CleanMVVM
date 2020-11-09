@@ -8,5 +8,6 @@ class DataViewModel @ViewModelInject constructor(
     private val repository: UserDataRepository
 ) : ViewModel() {
 
-    val data = repository.getData()
+    var data = repository.getData()
+
 }
